@@ -1,0 +1,37 @@
+<div class="card my-3">
+  <!-- <img src="" class="card-img-top" alt="{{ personaje.name }}"> -->
+  <div class="card-body">
+    <span
+      class="btn btn-sm float-end"
+      [ngClass]="{
+        'btn-primary': personaje.gender.toLowerCase().includes('male'),
+        'btn-danger': personaje.gender.toLowerCase().includes('female'),
+        'btn-secondary': personaje.gender.toLowerCase().includes('n/a'),
+      }"
+      >{{ personaje.gender }}</span
+    >
+    <h2 class="card-title">{{ personaje.name }}</h2>
+    <p class="text-muted">
+      Height: {{ personaje.height }}
+      <br />
+      Mass: {{ personaje.mass }}
+    </p>
+    <hr />
+
+    <div class="row text-left">
+      <p class="text-muted">
+        <strong>Characteristics:</strong>
+        <br />
+        &bull; Hair color: {{ personaje.hair_color }}
+        <br />
+        &bull; Skin color: {{ personaje.skin_color }}
+        <br />
+        &bull; Eye color: {{ personaje.eye_color }} <br />
+      </p>
+    </div>
+
+    <a href="#" class="btn btn-success"
+      >Birth year: {{ personaje.birth_year }}</a
+    >
+  </div>
+</div>
